@@ -200,7 +200,7 @@ void GPIO_PCLKControl(GPIO_RegDef_t *pGPIOx, uint8_t EN)
 uint8_t GPIO_ReadPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber)
 {
 	uint8_t value;
-	value = (uint8_t)((pGPIOx->IDR >> PinNumber) & 0x00000001);
+	value = (uint8_t)((pGPIOx->IDR >> PinNumber) & 0b00000001);
 	return value;
 }
 
